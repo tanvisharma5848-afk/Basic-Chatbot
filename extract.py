@@ -1,15 +1,12 @@
-import fitz 
+import fitz
 
 docs = fitz.open('sample.pdf')
+all_text = ""
 
-
-all_text = " "
 for i in range(len(docs)):
     text = docs[i].get_text()
     all_text += text
 
-with open('Extracted_text.txt', 'w') as file:
+with open('Extracted_Text.txt','w') as file:
     file.write(all_text)
-    print("File saved Successfully")
-
-
+    print("File Saved Successfully")
